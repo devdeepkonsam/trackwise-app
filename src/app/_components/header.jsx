@@ -11,15 +11,16 @@ function Header(){
     return (
         <div className="p-5 flex justify-between items-center border shadow-sm">
             <div className="flex items-center">
-                <Image src={'/money-svgrepo-com.svg'} alt="logo" width={60}  height={60}/>
-                <span className="text-orange-400 font-bold text-xl">Trackwise</span>
+                <Image src={'/money-svgrepo-com.svg'} alt="logo" width={50}  height={50}/>
+                <span className="font-bold text-xl" style={{ color: "#14b8a6" }}>Trackwise</span>
             </div>
-            {isSignedIn ? (<UserButton />) : <div>
+            {isSignedIn ? (<UserButton />) : 
+            <div className="flex gap-3 items-center">
                 <Link href='/dashboard'>
-                    <Button>Dashboard</Button>
+                    <Button variant = "outline" className="rounded-full">Dashboard</Button>
                 </Link>
                 <Link  href='/sign-in'> 
-                    <Button>Get Started</Button>
+                    <Button className="rounded-full">Get Started</Button>
                 </Link>
             </div> }
             
