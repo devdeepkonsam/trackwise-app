@@ -30,3 +30,4 @@ export const Expenses = pgTable('expenses', {
     createdBy : varchar('created_by').notNull(),
 })
 
+
