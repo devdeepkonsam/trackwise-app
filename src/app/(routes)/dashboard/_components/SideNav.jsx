@@ -12,6 +12,7 @@ import {
 import { UserButton } from "@clerk/nextjs";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
+
 function SideNav() {
   const menuList = [
     {
@@ -50,23 +51,26 @@ function SideNav() {
   useEffect(() => {
     console.log(path);
   }, [path]);
+
   return (
     <div className="h-screen p-5 border shadow-sm">
       <div className="flex items-center">
-        <Image src={'/logo.svg'} alt="logo" width={50}  height={50}/>
-        <span className="font-bold text-xl" style={{ color: "#14b8a6" }}>TrackWise</span>
+        <Image src={'/logo.svg'} alt="logo" width={50} height={50} />
+        <span className="font-bold text-xl" style={{ color: "#14b8a6" }}>
+          TrackWise
+        </span>
       </div>
       <div className="mt-5">
         {menuList.map((menu, index) => (
           <Link href={menu.path} key={index}>
             <h2
               className={`flex gap-2 items-center
-                    text-gray-500 font-medium
-                    mb-2
-                    p-4 cursor-pointer rounded-full
-                    hover:text-primary hover:bg-teal-100
-                    ${path == menu.path && "text-primary bg-teal-100"}
-                    `}
+                text-gray-500 font-medium
+                mb-2
+                p-4 cursor-pointer rounded-full
+                hover:text-primary hover:bg-teal-100
+                ${path == menu.path && "text-primary bg-teal-100"}
+              `}
             >
               <menu.icon />
               {menu.name}
@@ -74,12 +78,9 @@ function SideNav() {
           </Link>
         ))}
       </div>
-      <div
-        className="fixed bottom-10 p-5 flex gap-2
-            items-center"
-      >
+      <div className="fixed bottom-10 p-5 flex gap-2 items-center">
         <UserButton />
-        Profile
+        <span>Profile</span>
       </div>
     </div>
   );
