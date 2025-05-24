@@ -11,7 +11,7 @@ function Header(){
     return (
         <div className="p-5 flex justify-between items-center border shadow-sm">
             <div className="flex items-center">
-                <Image src={'/money-svgrepo-com.svg'} alt="logo" width={50}  height={50}/>
+                <Image src={'/logo.svg'} alt="logo" width={50}  height={50}/>
                 <span className="font-bold text-xl" style={{ color: "#14b8a6" }}>Trackwise</span>
             </div>
             {isSignedIn ? (<UserButton />) : 
