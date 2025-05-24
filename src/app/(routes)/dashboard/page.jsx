@@ -1,4 +1,16 @@
-'use client'
+"use client";
+import React, { useEffect, useState } from "react";
+import { UserButton, useUser } from "@clerk/nextjs";
 
-import React,{useState,useEffect} from "react"
-import { UserButton } from "@clerk/nextjs"
+function Dashboard() {
+  return (
+    <div className="p-8 bg-">
+      <h2 className="font-bold text-4xl">Hi, DEV 👋</h2>
+      <p className="text-gray-500">
+        Here's what happenning with your money, Lets Manage your expense
+      </p>
+    </div>
+  );
+}
+
+export default Dashboard;
