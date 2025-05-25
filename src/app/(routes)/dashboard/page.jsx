@@ -6,8 +6,7 @@ import { db } from "../../../../utils/dbConfig";
 import { desc, eq, getTableColumns, sql } from "drizzle-orm";
 import { Budgets, Expenses, Incomes } from "../../../../utils/schema";
 import BarChartDashboard from "./_components/BarChartDashboard";
-import BudgetItem from "./budgets/_components/BudgetItem";
-import ExpenseListTable from "./expenses/_components/ExpenseListTable";
+
 
 function Dashboard() {
   const { user } = useUser();
@@ -96,15 +95,15 @@ function Dashboard() {
           />
         </div>
         <div className="grid gap-5">
-          <h2 className="font-bold text-lg text-teal-600">Latest Budgets</h2>
+          <h2 className="font-bold text-lg">Latest Budgets</h2>
           {budgetList?.length > 0
             ? budgetList.map((budget, index) => (
                 <BudgetItem budget={budget} key={index} />
               ))
             : [1, 2, 3, 4].map((item, index) => (
                 <div
-                  className="h-[180xp] w-full bg-slate-200 rounded-lg animate-pulse"
-                  key={index}
+                  className="h-[180xp] w-full
+                 bg-slate-200 rounded-lg animate-pulse"
                 ></div>
               ))}
         </div>
