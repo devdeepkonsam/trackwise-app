@@ -20,7 +20,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <ClerkProvider
-    publishablekey = {process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY}>
+    publishableKey = { process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY || 'pk_test_bm92ZWwtZ2F0b3ItMzAuY2xlcmsuYWNjb3VudHMuZGV2JA' }>
     <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
