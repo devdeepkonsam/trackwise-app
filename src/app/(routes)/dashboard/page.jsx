@@ -89,6 +89,7 @@ function Dashboard() {
         <div className="lg:col-span-2">
           <BarChartDashboard budgetList={budgetList} />
 
+
         </div>
       </div>
     </div>
