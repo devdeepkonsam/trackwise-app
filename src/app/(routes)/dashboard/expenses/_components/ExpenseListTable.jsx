@@ -32,7 +32,7 @@ function ExpenseListTable({ expensesList = [], refreshData }) { //
           className="grid grid-cols-4 bg-slate-50 rounded-bl-xl rounded-br-xl p-2"
         >
           <h2>{expenses.name}</h2>
-          <h2>{expenses.amount}</h2>
+          <h2>₹{expenses.amount}</h2>
           <h2>{expenses.createdAt}</h2>
           <h2
             onClick={() => deleteExpense(expenses)}
