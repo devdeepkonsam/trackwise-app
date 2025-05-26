@@ -77,7 +77,7 @@ function Dashboard() {
         <div className="lg:col-span-2">
           <BarChartDashboard budgetList={budgetList} />
           <ExpenseListTable
-          expenseslist={expensesList}
+          expensesList={expensesList}
           refreshData={() => getAllEXpenses()}
           />
         </div>
