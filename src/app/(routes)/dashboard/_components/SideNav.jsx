@@ -78,9 +78,8 @@ function SideNav() {
           </Link>
         ))}
       </div>
-      <div className="fixed bottom-10 p-5 flex gap-2 items-center">
-        <UserButton />
-        <span>Profile</span>
+      <div className="absolute bottom-5 left-0 w-full px-5 text-center text-xs text-gray-400">
+        © {new Date().getFullYear()} TrackWise. All rights reserved.
       </div>
     </div>
   );
