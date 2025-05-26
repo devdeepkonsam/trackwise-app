@@ -8,6 +8,8 @@ import {
   BadgeIndianRupee,
   TrendingUp,
   TrendingDownIcon,
+  Info,
+  Mail,
 } from "lucide-react";
 import { UserButton } from "@clerk/nextjs";
 import { usePathname } from "next/navigation";
@@ -44,6 +46,19 @@ function SideNav() {
       name: "Upgrade",
       icon: ShieldCheck,
       path: "/dashboard/upgrade",
+    },
+    
+    {
+      id: 6,
+      name: "Contact",
+      icon: Mail,
+      path: "/dashboard/contact",
+    },
+    {
+      id: 7,
+      name: "About",
+      icon: Info,
+      path: "/dashboard/about",
     },
   ];
   const path = usePathname();
