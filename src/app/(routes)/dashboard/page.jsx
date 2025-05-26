@@ -67,8 +67,8 @@ function Dashboard() {
 
   return (
     <div className="p-8 bg-">
-      <h2 className="font-bold text-4xl text-teal-600">Hi, {user?.fullName} 👋</h2>
-      <p className="text-teal-500">
+      <h2 className="font-bold text-4xl text-black">Hi, {user?.fullName} 👋</h2>
+      <p className="text-black">
         Here's what happenning with your money, Lets Manage your expense
       </p>
 
@@ -77,8 +77,8 @@ function Dashboard() {
         <div className="lg:col-span-2">
           <BarChartDashboard budgetList={budgetList} />
           <ExpenseListTable
-          expenseslist={expensesList} 
-          refreshData={()=>getAllEXpenses()} 
+          expenseslist={expensesList}
+          refreshData={() => getAllEXpenses()}
           />
         </div>
         <div className="grid gap-5">
