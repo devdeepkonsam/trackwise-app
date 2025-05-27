@@ -74,6 +74,7 @@ A step-by-step video walkthrough is in the works. Stay tuned on my channel—sub
 ```bash
 git clone https://github.com/devdeepkonsam/trackwise-app.git
 cd trackwise-app
+```
 
 **Installation**
 
