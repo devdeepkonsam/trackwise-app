@@ -19,7 +19,7 @@
 
   <div align="center">
     A modern task-/habit-tracking app with Clerk auth&nbsp;and&nbsp;Neon&nbsp;PostgreSQL.<br/>
-    Built and maintained by <a href="https://github.com/devdeepkonsam" target="_blank"><b>Devdeep&nbsp;Singha</b></a>. Inspired by&nbsp;<a href="https://github.com/mendsalbert" target="_blank"><b>mendsalbert</b></a>.
+    Built and maintained by <a href="https://github.com/devdeepkonsam" target="_blank"><b>Devdeep&nbsp;Singha</b></a>. Built upon&nbsp;<a href="https://github.com/mendsalbert" target="_blank"><b>mendsalbert's Project</b></a>.
   </div>
 </div>
 
