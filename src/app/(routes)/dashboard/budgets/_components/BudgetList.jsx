@@ -14,9 +14,7 @@ function BudgetList() {
   useEffect(()=>{
     user&&getBudgetList();
   },[user])
-  /**
-   * used to get budget List
-   */
+  
   const getBudgetList=async()=>{
 
     const result=await db.select({

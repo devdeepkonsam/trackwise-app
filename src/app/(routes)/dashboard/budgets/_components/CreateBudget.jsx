@@ -27,9 +27,6 @@ function CreateBudget({ refreshData }) {
 
   const { user } = useUser();
 
-  /**
-   * Used to Create New Budget
-   */
   const onCreateBudget = async () => {
     const result = await db
       .insert(Budgets)

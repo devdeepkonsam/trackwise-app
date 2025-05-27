@@ -56,9 +56,6 @@ function ExpensesScreen({ params }) {
     getExpensesList();
   };
 
-  /**
-   * Get Latest Expenses
-   */
   const getExpensesList = async () => {
     const result = await db
       .select()
@@ -69,9 +66,7 @@ function ExpensesScreen({ params }) {
     console.log(result);
   };
 
-  /**
-   * Used to Delete budget
-   */
+
   const deleteBudget = async () => {
     const deleteExpenseResult = await db
       .delete(Expenses)

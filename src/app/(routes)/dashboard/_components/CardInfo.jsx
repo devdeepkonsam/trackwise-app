@@ -23,7 +23,7 @@ function CardInfo({budgetList, incomeList}) {
 
         budgetList.forEach((budget) => {
             totalBudget_ += Number(budget.amount) || 0;
-            totalSpend_ += Number(budget.totalSpend) || 0; // <-- FIXED HERE
+            totalSpend_ += Number(budget.totalSpend) || 0;
         });
 
         incomeList.forEach((income) => {
@@ -40,22 +40,6 @@ function CardInfo({budgetList, incomeList}) {
           CalculateCardInfo();
     }
     }, [budgetList, incomeList]);
-
-
-    // useEffect(() => {
-    //     if (totalBudget > 0 || totalIncome > 0 || totalSpend > 0) {
-    //       const fetchFinancialAdvice = async () => {
-    //         const advice = await aiFinanceData(
-    //           totalBudget,
-    //           totalIncome,
-    //           totalSpend
-    //         );
-    //         setFinancecialAdvice(advice);
-    //       };
-    //       fetchFinancialAdvice();
-    //     }
-    // }, [totalBudget, totalIncome, totalSpend]);
-
 
     useEffect(() => {
       if (totalBudget > 0 || totalIncome > 0 || totalSpend > 0) {

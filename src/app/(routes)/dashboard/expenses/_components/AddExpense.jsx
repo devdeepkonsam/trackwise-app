@@ -11,9 +11,7 @@ function AddExpense({ budgetId, user, refreshData }) {
   const [name, setName] = useState();
   const [amount, setAmount] = useState();
   const [loading, setLoading] = useState(false);
-  /**
-   * Used to Add New Expense
-   */
+  
   const addNewExpense = async () => {
     setLoading(true);
     const result = await db
