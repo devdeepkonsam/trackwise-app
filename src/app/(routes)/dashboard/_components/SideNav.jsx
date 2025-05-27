@@ -6,8 +6,6 @@ import {
   ReceiptText,
   ShieldCheck,
   BadgeIndianRupee,
-  TrendingUp,
-  TrendingDownIcon,
   Info,
   Mail,
 } from "lucide-react";
@@ -47,7 +45,6 @@ function SideNav() {
       icon: ShieldCheck,
       path: "/dashboard/upgrade",
     },
-    
     {
       id: 6,
       name: "Contact",
@@ -70,10 +67,12 @@ function SideNav() {
   return (
     <div className="h-screen p-5 border shadow-sm">
       <div className="flex items-center">
-        <Image src={'/logo.svg'} alt="logo" width={50} height={50} />
-        <span className="font-bold text-xl" style={{ color: "#14b8a6" }}>
-          TrackWise
-        </span>
+        <Link href="/" className="flex items-center gap-2">
+          <Image src="/logo.svg" alt="logo" width={50} height={50} />
+          <span className="font-bold text-xl" style={{ color: "#14b8a6" }}>
+            TrackWise
+          </span>
+        </Link>
       </div>
       <div className="mt-5">
         {menuList.map((menu, index) => (
