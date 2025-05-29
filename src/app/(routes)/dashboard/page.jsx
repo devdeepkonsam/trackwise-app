@@ -56,20 +56,21 @@ function Dashboard() {
   };
 
   const getIncomeList = async () => {
-    try {
-      const result = await db
-        .select({
-          ...getTableColumns(Incomes),
-          totalAmount: sql`sum((${Incomes.amount})::numeric)`.mapWith(Number),
-        })
-        .from(Incomes)
-        .groupBy(Incomes.id);
+  try {
+    const result = await db
+      .select({
+        ...getTableColumns(Incomes),
+        totalAmount: sql`sum((${Incomes.amount})::numeric)`.mapWith(Number),
+      })
+      .from(Incomes)
+      .where(eq(Incomes.createdBy, user?.primaryEmailAddress?.emailAddress))
+      .groupBy(Incomes.id);
 
-      setIncomeList(result);
-    } catch (error) {
-      console.error("Error fetching income list:", error);
-    }
-  };
+    setIncomeList(result);
+  } catch (error) {
+    console.error("Error fetching income list:", error);
+  }
+};
 
   const exportAllDataToExcel = () => {
     const workbook = XLSX.utils.book_new();
