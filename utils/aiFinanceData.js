@@ -11,7 +11,9 @@ const aiFinanceData = async (totalBudget, totalIncome, totalSpend) => {
       - Total Budget: ${totalBudget} INR 
       - Expenses: ${totalSpend} INR 
       - Incomes: ${totalIncome} INR
-      Provide detailed financial advice in 2 sentences to help the user manage their finances more effectively and don't say include expenses not included.
+      Provide detailed financial advice in 2 sentences to help the user manage their finances more effectively and 
+      don't  include 1.about not enought data like expenses data, 2.create a budget coz its already a budget tracker webiste.
+      just focus on how to manage the finances better.
     `;
 
     const response = await ai.models.generateContent({
